@@ -567,6 +567,7 @@ export function Notifications() {
   const justContent = (
     <Popover placement="bottomLeft" content={content} trigger="click">
       <img src={'/bell.svg'} style={{ cursor: 'pointer' }} />
+      <h1 className="title">M</h1>
     </Popover>
   );
 
