@@ -1,6 +1,18 @@
 .App-Bar {
   padding: 0px;
-  justify-content: space-between !important;
+  justify-content: space-between !important;            
+  background-color: #0715d4;
+
+  //'@primary-color': '#768BF9',
+  background-color: #768BF9;
+  //'@text-color': 'rgba(255, 255, 255)',
+  background-color: rgba(255, 255, 255);
+  //'@text-color': '#d40767',
+  background-color: #d40767;
+  //'@assetPrefix': assetPrefix || "''",
+  background-color: #FFF;
+  //'@body-background': '#49527a',
+  background-color: #49527a;
 
   button.ant-btn:not(.connector) {
     height: 32px;
@@ -8,19 +20,33 @@
   }
 }
 
+.logoText {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
 .title {
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 26px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  //display: flex;
+  //align-items: center;
+  //text-align: center;
 
   color: #ffffff;
-  padding: 10px 14px 10px 6px;
+  padding: 10px 14px 1px 6px;
 
   margin-bottom: 0px;
+}
+
+.subTitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;  
+  padding: 1px 15px 1px 6px;
 }
 
 .divider {

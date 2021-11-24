@@ -10,9 +10,10 @@ const plugins = [
       lessLoaderOptions: {
         lessOptions: {
           modifyVars: {
-            '@primary-color': '#768BF9',
+            '@primary-color': '#768BF9', //steelblue
             '@text-color': 'rgba(255, 255, 255)',
             '@assetPrefix': assetPrefix || "''",
+
           },
           javascriptEnabled: true,
         },

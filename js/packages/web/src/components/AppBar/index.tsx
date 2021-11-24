@@ -50,7 +50,7 @@ const MetaplexMenu = () => {
     return (
       <>
         <Modal
-          title={<img src={'/metaplex-logo.svg'} />}
+          title={<img src={'/tsunami-logo.svg'} />}
           visible={isModalVisible}
           footer={null}
           className={'modal-box'}
@@ -109,7 +109,7 @@ const MetaplexMenu = () => {
 export const LogoLink = () => {
   return (
     <Link to={`/`}>
-      <img src={'/metaplex-logo.svg'} />
+      <img src={'/tsunami-logo.svg'} />
     </Link>
   );
 };
@@ -125,6 +125,10 @@ export const AppBar = () => {
       <div id="desktop-navbar">
         <div className="app-left">
           <LogoLink />
+          <div className="logoText">
+            <div className="title">Tsunami Protocol</div>
+            <div className="subTitle">The NFT Marketplace</div>
+          </div>
           &nbsp;&nbsp;&nbsp;
           <MetaplexMenu />
         </div>
