@@ -27,7 +27,7 @@ export const AppLayout = React.memo((props: any) => {
             }}
           >
             <div className="directionsText">
-              <div className="directionsTitle">Purchase Data</div>
+              <div className="directionsTitle">Purchase Content</div>
               <div className="directionsSubTitle">Search the Tsunami marketplace to find then purchase the dataset or algorithm you need</div>
             </div>
             {props.children}

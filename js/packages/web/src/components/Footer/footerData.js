@@ -1,6 +1,6 @@
 export const footerConf = {
-  showShopName: true,
-  showEmailSubscriber: true,
+  showShopName: false,
+  showEmailSubscriber: false,
   emailSubscriberText:
     'Join our mailing list for updates about our artists and more.',
   components: [
