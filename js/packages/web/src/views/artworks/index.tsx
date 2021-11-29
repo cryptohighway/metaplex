@@ -7,6 +7,7 @@ import { useCreatorArts, useUserArts } from '../../hooks';
 import { useMeta } from '../../contexts';
 import { CardLoader } from '../../components/MyLoader';
 import { useWallet } from '@solana/wallet-adapter-react';
+import { getSolanaChainlinkPrice } from './SolanaChainlinkPrice';
 
 const { TabPane } = Tabs;
 
@@ -31,12 +32,14 @@ export const ArtworksView = () => {
     500: 1,
   };
 
+  const solPrice = getSolanaChainlinkPrice();
+
   const items =
     activeKey === ArtworkViewState.Owned
       ? ownedMetadata.map(m => m.metadata)
       : activeKey === ArtworkViewState.Created
-      ? createdMetadata
-      : metadata;
+        ? createdMetadata
+        : metadata;
 
   useEffect(() => {
     if (connected) {
@@ -54,19 +57,20 @@ export const ArtworksView = () => {
     >
       {!isLoading
         ? items.map((m, idx) => {
-            const id = m.pubkey;
-            return (
-              <Link to={`/art/${id}`} key={idx}>
-                <ArtCard
-                  key={id}
-                  pubkey={m.pubkey}
-                  preview={false}
-                  height={250}
-                  width={250}
-                />
-              </Link>
-            );
-          })
+          const id = m.pubkey;
+          return (
+            <Link to={`/art/${id}`} key={idx}>
+              <ArtCard
+                solPrice={solPrice}
+                key={id}
+                pubkey={m.pubkey}
+                preview={false}
+                height={250}
+                width={250}
+              />
+            </Link>
+          );
+        })
         : [...Array(10)].map((_, idx) => <CardLoader key={idx} />)}
     </Masonry>
   );
