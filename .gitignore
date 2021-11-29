@@ -38,3 +38,6 @@ hfuzz_workspace
 js/packages/web/.env
 traits
 traits-configuration.json
+js/packages/web/src/chainlink_solana_demo-keypair.json
+js/packages/web/src/config.yml
+js/packages/web/src/id.json

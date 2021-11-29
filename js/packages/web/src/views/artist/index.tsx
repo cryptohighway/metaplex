@@ -25,13 +25,13 @@ export const ArtistView = () => {
     >
       {artwork.length > 0
         ? artwork.map((m, idx) => {
-            const id = m.pubkey;
-            return (
-              <Link to={`/art/${id}`} key={idx}>
-                <ArtCard key={id} pubkey={m.pubkey} preview={false} />
-              </Link>
-            );
-          })
+          const id = m.pubkey;
+          return (
+            <Link to={`/art/${id}`} key={idx}>
+              <ArtCard key={id} pubkey={m.pubkey} preview={false} />
+            </Link>
+          );
+        })
         : [...Array(6)].map((_, idx) => <CardLoader key={idx} />)}
     </Masonry>
   );

@@ -156,10 +156,10 @@ export const AuctionCreateView = () => {
   const [auctionObj, setAuctionObj] =
     useState<
       | {
-          vault: StringPublicKey;
-          auction: StringPublicKey;
-          auctionManager: StringPublicKey;
-        }
+        vault: StringPublicKey;
+        auction: StringPublicKey;
+        auctionManager: StringPublicKey;
+      }
       | undefined
     >(undefined);
   const [attributes, setAttributes] = useState<AuctionState>({
@@ -223,7 +223,7 @@ export const AuctionCreateView = () => {
         if (!editions) {
           item.winningConfigType =
             item.metadata.info.updateAuthority ===
-            (wallet?.publicKey || SystemProgram.programId).toBase58()
+              (wallet?.publicKey || SystemProgram.programId).toBase58()
               ? WinningConfigType.FullRightsTransfer
               : WinningConfigType.TokenOnlyTransfer;
         }
@@ -265,7 +265,7 @@ export const AuctionCreateView = () => {
         ) {
           item.winningConfigType =
             item.metadata.info.updateAuthority ===
-            (wallet?.publicKey || SystemProgram.programId).toBase58()
+              (wallet?.publicKey || SystemProgram.programId).toBase58()
               ? WinningConfigType.FullRightsTransfer
               : WinningConfigType.TokenOnlyTransfer;
         }
@@ -299,9 +299,9 @@ export const AuctionCreateView = () => {
       const tiers = tieredAttributes.tiers;
       tiers.forEach(
         c =>
-          (c.items = c.items.filter(
-            i => (i as TierDummyEntry).winningConfigType !== undefined,
-          )),
+        (c.items = c.items.filter(
+          i => (i as TierDummyEntry).winningConfigType !== undefined,
+        )),
       );
       let filteredTiers = tiers.filter(
         i => i.items.length > 0 && i.winningSpots.length > 0,
@@ -454,7 +454,7 @@ export const AuctionCreateView = () => {
       attributes.instantSalePrice &&
       attributes.priceFloor === attributes.instantSalePrice;
 
-    const LAMPORTS_PER_TOKEN = attributes.quoteMintAddress == WRAPPED_SOL_MINT.toBase58()? LAMPORTS_PER_SOL
+    const LAMPORTS_PER_TOKEN = attributes.quoteMintAddress == WRAPPED_SOL_MINT.toBase58() ? LAMPORTS_PER_SOL
       : Math.pow(10, attributes.quoteMintInfo.decimals || 0)
 
     const auctionSettings: IPartialCreateAuctionArgs = {
@@ -462,23 +462,23 @@ export const AuctionCreateView = () => {
       endAuctionAt: isInstantSale
         ? null
         : new BN(
-            (attributes.auctionDuration || 0) *
-              (attributes.auctionDurationType == 'days'
-                ? 60 * 60 * 24 // 1 day in seconds
-                : attributes.auctionDurationType == 'hours'
-                ? 60 * 60 // 1 hour in seconds
-                : 60), // 1 minute in seconds
-          ), // endAuctionAt is actually auction duration, poorly named, in seconds
+          (attributes.auctionDuration || 0) *
+          (attributes.auctionDurationType == 'days'
+            ? 60 * 60 * 24 // 1 day in seconds
+            : attributes.auctionDurationType == 'hours'
+              ? 60 * 60 // 1 hour in seconds
+              : 60), // 1 minute in seconds
+        ), // endAuctionAt is actually auction duration, poorly named, in seconds
       auctionGap: isInstantSale
         ? null
         : new BN(
-            (attributes.gapTime || 0) *
-              (attributes.gapTimeType == 'days'
-                ? 60 * 60 * 24 // 1 day in seconds
-                : attributes.gapTimeType == 'hours'
-                ? 60 * 60 // 1 hour in seconds
-                : 60), // 1 minute in seconds
-          ),
+          (attributes.gapTime || 0) *
+          (attributes.gapTimeType == 'days'
+            ? 60 * 60 * 24 // 1 day in seconds
+            : attributes.gapTimeType == 'hours'
+              ? 60 * 60 // 1 hour in seconds
+              : 60), // 1 minute in seconds
+        ),
       priceFloor: new PriceFloor({
         type: attributes.priceFloor
           ? PriceFloorType.Minimum
@@ -502,8 +502,8 @@ export const AuctionCreateView = () => {
     const safetyDepositDrafts = isOpenEdition
       ? []
       : attributes.category !== AuctionCategory.Tiered
-      ? attributes.items
-      : tieredAttributes.items;
+        ? attributes.items
+        : tieredAttributes.items;
     const participationSafetyDepositDraft = isOpenEdition
       ? attributes.items[0]
       : attributes.participationNFT;
@@ -811,9 +811,9 @@ const InstantSaleStep = ({
   const [showTokenDialog, setShowTokenDialog] = useState(false);
   const [mint, setMint] = useState<PublicKey>(WRAPPED_SOL_MINT)
   // give default value to mint
-  const mintInfo = useTokenList().tokenMap.get((!mint? QUOTE_MINT.toString(): mint.toString()))
+  const mintInfo = useTokenList().tokenMap.get((!mint ? QUOTE_MINT.toString() : mint.toString()))
 
-  attributes.quoteMintAddress = mint? mint.toBase58(): QUOTE_MINT.toBase58()
+  attributes.quoteMintAddress = mint ? mint.toBase58() : QUOTE_MINT.toBase58()
 
   if (attributes.quoteMintAddress) {
     attributes.quoteMintInfo = useMint(attributes.quoteMintAddress)!
@@ -910,7 +910,7 @@ const InstantSaleStep = ({
               setMint={setMint}
               open={showTokenDialog}
               onClose={() => {
-                setShowTokenDialog(false); 
+                setShowTokenDialog(false);
               }}
             />
           </label>
@@ -963,10 +963,10 @@ const CopiesStep = (props: {
   const [showTokenDialog, setShowTokenDialog] = useState(false);
   const [mint, setMint] = useState<PublicKey>(WRAPPED_SOL_MINT)
   // give default value to mint
-  const mintInfo = useTokenList().tokenMap.get((!mint? QUOTE_MINT.toString(): mint.toString()))
+  const mintInfo = useTokenList().tokenMap.get((!mint ? QUOTE_MINT.toString() : mint.toString()))
 
-  props.attributes.quoteMintAddress = mint? mint.toBase58(): QUOTE_MINT.toBase58()
-  
+  props.attributes.quoteMintAddress = mint ? mint.toBase58() : QUOTE_MINT.toBase58()
+
   if (props.attributes.quoteMintAddress) {
     props.attributes.quoteMintInfo = useMint(props.attributes.quoteMintAddress)!
     props.attributes.quoteMintInfoExtended = useTokenList().tokenMap.get(props.attributes.quoteMintAddress)!
@@ -1010,7 +1010,7 @@ const CopiesStep = (props: {
           >
             Select NFT
           </ArtSelector>
-              
+
           <label className="action-field">
             <span className="field-title">Auction mint</span>
             <TokenButton mint={mint} onClick={() => setShowTokenDialog(true)} />
@@ -1018,7 +1018,7 @@ const CopiesStep = (props: {
               setMint={setMint}
               open={showTokenDialog}
               onClose={() => {
-                setShowTokenDialog(false); 
+                setShowTokenDialog(false);
               }}
             />
           </label>
@@ -1070,9 +1070,9 @@ const NumberOfWinnersStep = (props: {
   const [showTokenDialog, setShowTokenDialog] = useState(false);
   const [mint, setMint] = useState<PublicKey>(WRAPPED_SOL_MINT)
   // give default value to mint
-  const mintInfo = useTokenList().tokenMap.get((!mint? QUOTE_MINT.toString(): mint.toString()))
+  const mintInfo = useTokenList().tokenMap.get((!mint ? QUOTE_MINT.toString() : mint.toString()))
 
-  props.attributes.quoteMintAddress = mint? mint.toBase58(): QUOTE_MINT.toBase58()
+  props.attributes.quoteMintAddress = mint ? mint.toBase58() : QUOTE_MINT.toBase58()
 
   if (props.attributes.quoteMintAddress) {
     props.attributes.quoteMintInfo = useMint(props.attributes.quoteMintAddress)!
@@ -1107,21 +1107,21 @@ const NumberOfWinnersStep = (props: {
               }
             />
           </label>
-              
-              <label className="action-field">
-                <span className="field-title">Auction mint</span>
-                <span className="field-info">
-                  This will be the quote mint for your auction.
-                </span>
-                <TokenButton mint={mint} onClick={() => setShowTokenDialog(true)} />
-                <TokenDialog
-                  setMint={setMint}
-                  open={showTokenDialog}
-                  onClose={() => {
-                    setShowTokenDialog(false); 
-                  }}
-                />
-              </label>
+
+          <label className="action-field">
+            <span className="field-title">Auction mint</span>
+            <span className="field-info">
+              This will be the quote mint for your auction.
+            </span>
+            <TokenButton mint={mint} onClick={() => setShowTokenDialog(true)} />
+            <TokenDialog
+              setMint={setMint}
+              open={showTokenDialog}
+              onClose={() => {
+                setShowTokenDialog(false);
+              }}
+            />
+          </label>
         </Col>
       </Row>
       <Row>
@@ -1151,10 +1151,10 @@ const PriceAuction = (props: {
       <Row className="call-to-action">
         <h2>Price</h2>
         <p>
-          Set the price for your auction. 
+          Set the price for your auction.
           {props.attributes.quoteMintAddress != WRAPPED_SOL_MINT.toBase58() && ` Warning! the auction quote mint is `}
-          {props.attributes.quoteMintAddress != WRAPPED_SOL_MINT.toBase58()&& <a href={`https://explorer.solana.com/address/${props.attributes?.quoteMintAddress}`} target="_blank"> {props.attributes?.quoteMintAddress != WRAPPED_SOL_MINT.toBase58() && 
-            `${quoteMintName} (${quoteMintExt})`} 
+          {props.attributes.quoteMintAddress != WRAPPED_SOL_MINT.toBase58() && <a href={`https://explorer.solana.com/address/${props.attributes?.quoteMintAddress}`} target="_blank"> {props.attributes?.quoteMintAddress != WRAPPED_SOL_MINT.toBase58() &&
+            `${quoteMintName} (${quoteMintExt})`}
           </a>}
         </p>
       </Row>
@@ -1174,8 +1174,8 @@ const PriceAuction = (props: {
                 className="input"
                 placeholder="Fixed Price"
                 prefix="◎"
-                suffix={props.attributes.quoteMintInfoExtended? props.attributes.quoteMintInfoExtended.symbol
-                    : props.attributes.quoteMintAddress == WRAPPED_SOL_MINT.toBase58()? "SOL": "CUSTOM"}
+                suffix={props.attributes.quoteMintInfoExtended ? props.attributes.quoteMintInfoExtended.symbol
+                  : props.attributes.quoteMintAddress == WRAPPED_SOL_MINT.toBase58() ? "SOL" : "CUSTOM"}
                 onChange={info =>
                   props.setAttributes({
                     ...props.attributes,
@@ -1191,7 +1191,7 @@ const PriceAuction = (props: {
             <label className="action-field">
               <span className="field-title">Price Floor</span>
               <span className="field-info">
-                This is the starting bid price for your auction. 
+                This is the starting bid price for your auction.
               </span>
               <Input
                 type="number"
@@ -1200,8 +1200,8 @@ const PriceAuction = (props: {
                 className="input"
                 placeholder="Price"
                 prefix="◎"
-                suffix={props.attributes.quoteMintInfoExtended? props.attributes.quoteMintInfoExtended.symbol
-                  : props.attributes.quoteMintAddress == WRAPPED_SOL_MINT.toBase58()? "SOL": "CUSTOM"}
+                suffix={props.attributes.quoteMintInfoExtended ? props.attributes.quoteMintInfoExtended.symbol
+                  : props.attributes.quoteMintAddress == WRAPPED_SOL_MINT.toBase58() ? "SOL" : "CUSTOM"}
                 onChange={info =>
                   props.setAttributes({
                     ...props.attributes,
@@ -1220,11 +1220,11 @@ const PriceAuction = (props: {
               type="number"
               min={0}
               className="input"
-              placeholder={`Tick size in ${props.attributes.quoteMintInfoExtended? props.attributes.quoteMintInfoExtended.symbol
-                : props.attributes.quoteMintAddress == WRAPPED_SOL_MINT.toBase58()? "SOL": "your custom currency"}`}
+              placeholder={`Tick size in ${props.attributes.quoteMintInfoExtended ? props.attributes.quoteMintInfoExtended.symbol
+                : props.attributes.quoteMintAddress == WRAPPED_SOL_MINT.toBase58() ? "SOL" : "your custom currency"}`}
               prefix="◎"
-              suffix={props.attributes.quoteMintInfoExtended? props.attributes.quoteMintInfoExtended.symbol
-                : props.attributes.quoteMintAddress == WRAPPED_SOL_MINT.toBase58()? "SOL": "CUSTOM"}
+              suffix={props.attributes.quoteMintInfoExtended ? props.attributes.quoteMintInfoExtended.symbol
+                : props.attributes.quoteMintAddress == WRAPPED_SOL_MINT.toBase58() ? "SOL" : "CUSTOM"}
               onChange={info =>
                 props.setAttributes({
                   ...props.attributes,
@@ -1584,10 +1584,10 @@ const TierTableStep = (props: {
                   selected={
                     (i as TierDummyEntry).safetyDepositBoxIndex !== undefined
                       ? [
-                          props.attributes.items[
-                            (i as TierDummyEntry).safetyDepositBoxIndex
-                          ],
-                        ]
+                        props.attributes.items[
+                        (i as TierDummyEntry).safetyDepositBoxIndex
+                        ],
+                      ]
                       : []
                   }
                   setSelected={items => {
@@ -1610,14 +1610,14 @@ const TierTableStep = (props: {
                       if (
                         items[0].masterEdition &&
                         items[0].masterEdition.info.key ==
-                          MetadataKey.MasterEditionV1
+                        MetadataKey.MasterEditionV1
                       ) {
                         myNewTier.winningConfigType =
                           WinningConfigType.PrintingV1;
                       } else if (
                         items[0].masterEdition &&
                         items[0].masterEdition.info.key ==
-                          MetadataKey.MasterEditionV2
+                        MetadataKey.MasterEditionV2
                       ) {
                         myNewTier.winningConfigType =
                           WinningConfigType.PrintingV2;
@@ -1693,7 +1693,7 @@ const TierTableStep = (props: {
                           props.attributes.items[
                             myNewTier.safetyDepositBoxIndex
                           ].masterEdition?.info.key ==
-                            MetadataKey.MasterEditionV1
+                          MetadataKey.MasterEditionV1
                         ) {
                           value = WinningConfigType.PrintingV1;
                         }
@@ -1722,37 +1722,37 @@ const TierTableStep = (props: {
                     {((i as TierDummyEntry).winningConfigType ===
                       WinningConfigType.PrintingV1 ||
                       (i as TierDummyEntry).winningConfigType ===
-                        WinningConfigType.PrintingV2) && (
-                      <label className="action-field">
-                        <span className="field-title">
-                          How many copies do you want to create for each winner?
-                          If you put 2, then each winner will get 2 copies.
-                        </span>
-                        <span className="field-info">
-                          Each copy will be given unique edition number e.g. 1
-                          of 30
-                        </span>
-                        <Input
-                          autoFocus
-                          className="input"
-                          placeholder="Enter number of copies sold"
-                          allowClear
-                          onChange={info => {
-                            const newTiers = newImmutableTiers(
-                              props.attributes.tiers,
-                            );
+                      WinningConfigType.PrintingV2) && (
+                        <label className="action-field">
+                          <span className="field-title">
+                            How many copies do you want to create for each winner?
+                            If you put 2, then each winner will get 2 copies.
+                          </span>
+                          <span className="field-info">
+                            Each copy will be given unique edition number e.g. 1
+                            of 30
+                          </span>
+                          <Input
+                            autoFocus
+                            className="input"
+                            placeholder="Enter number of copies sold"
+                            allowClear
+                            onChange={info => {
+                              const newTiers = newImmutableTiers(
+                                props.attributes.tiers,
+                              );
 
-                            const myNewTier =
-                              newTiers[configIndex].items[itemIndex];
-                            myNewTier.amount = parseInt(info.target.value);
-                            props.setAttributes({
-                              ...props.attributes,
-                              tiers: newTiers,
-                            });
-                          }}
-                        />
-                      </label>
-                    )}
+                              const myNewTier =
+                                newTiers[configIndex].items[itemIndex];
+                              myNewTier.amount = parseInt(info.target.value);
+                              props.setAttributes({
+                                ...props.attributes,
+                                tiers: newTiers,
+                              });
+                            }}
+                          />
+                        </label>
+                      )}
                   </>
                 )}
               </Card>
@@ -1859,8 +1859,8 @@ const ParticipationStep = (props: {
               className="input"
               placeholder="Fixed Price"
               prefix="◎"
-              suffix={props.attributes.quoteMintInfoExtended? props.attributes.quoteMintInfoExtended.symbol
-                : props.attributes.quoteMintAddress == WRAPPED_SOL_MINT.toBase58()? "SOL": "CUSTOM"}
+              suffix={props.attributes.quoteMintInfoExtended ? props.attributes.quoteMintInfoExtended.symbol
+                : props.attributes.quoteMintAddress == WRAPPED_SOL_MINT.toBase58() ? "SOL" : "CUSTOM"}
               onChange={info =>
                 props.setAttributes({
                   ...props.attributes,
@@ -1925,7 +1925,7 @@ const ReviewStep = (props: {
             }
           />
           {cost ? (
-            <AmountLabel title="Cost to Create" amount={cost} tokenInfo={useTokenList().tokenMap.get(WRAPPED_SOL_MINT.toString())}/>
+            <AmountLabel title="Cost to Create" amount={cost} tokenInfo={useTokenList().tokenMap.get(WRAPPED_SOL_MINT.toString())} />
           ) : (
             <Spin />
           )}
@@ -1939,8 +1939,8 @@ const ReviewStep = (props: {
           value={
             props.attributes.startSaleTS
               ? moment
-                  .unix(props.attributes.startSaleTS as number)
-                  .format('dddd, MMMM Do YYYY, h:mm a')
+                .unix(props.attributes.startSaleTS as number)
+                .format('dddd, MMMM Do YYYY, h:mm a')
               : 'Right after successfully published'
           }
         />
@@ -1961,8 +1961,8 @@ const ReviewStep = (props: {
           value={
             props.attributes.endTS
               ? moment
-                  .unix(props.attributes.endTS as number)
-                  .format('dddd, MMMM Do YYYY, h:mm a')
+                .unix(props.attributes.endTS as number)
+                .format('dddd, MMMM Do YYYY, h:mm a')
               : 'Until sold'
           }
         />
@@ -2039,9 +2039,8 @@ const Congrats = (props: {
   const newTweetURL = () => {
     const params = {
       text: "I've created a new NFT auction on Metaplex, check it out!",
-      url: `${
-        window.location.origin
-      }/#/auction/${props.auction?.auction.toString()}`,
+      url: `${window.location.origin
+        }/#/auction/${props.auction?.auction.toString()}`,
       hashtags: 'NFT,Crypto,Metaplex',
       // via: "Metaplex",
       related: 'Metaplex,Solana',

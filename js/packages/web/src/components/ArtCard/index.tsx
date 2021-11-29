@@ -6,7 +6,6 @@ import { useArt } from '../../hooks';
 import { PublicKey } from '@solana/web3.js';
 import { Artist, ArtType } from '../../types';
 import { MetaAvatar } from '../MetaAvatar';
-
 const { Meta } = Card;
 
 export interface ArtCardProps extends CardProps {
@@ -19,6 +18,7 @@ export interface ArtCardProps extends CardProps {
 
   name?: string;
   symbol?: string;
+  solPrice?: string;
   description?: string;
   creators?: Artist[];
   preview?: boolean;
@@ -47,6 +47,7 @@ export const ArtCard = (props: ArtCardProps) => {
     height,
     width,
     count,
+    solPrice,
     ...rest
   } = props;
   const art = useArt(pubkey);
@@ -98,6 +99,11 @@ export const ArtCard = (props: ArtCardProps) => {
         title={`${name}`}
         description={
           <>
+            {/*<SolanaChainlinkPrice />*/}
+            {(solPrice != undefined)
+              ? <div className="price-display">Price: 1 SOL ({`${solPrice}`} USD)</div>
+              : <div></div>
+            }
             <MetaAvatar creators={creators} size={32} />
             {/* {art.type === ArtType.Master && (
               <>
