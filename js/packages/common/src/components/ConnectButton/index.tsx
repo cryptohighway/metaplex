@@ -3,6 +3,7 @@ import { ButtonProps } from 'antd/lib/button';
 import React, { useCallback } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { useWalletModal } from '../../contexts';
+import { WalletOutlined } from '@ant-design/icons';
 
 export interface ConnectButtonProps
   extends ButtonProps,
@@ -41,17 +42,17 @@ export const ConnectButton = (props: ConnectButtonProps) => {
   }
 
   return (
-    <Dropdown.Button
+    <Button
       className={ className || (connected ?  'connector' : '')}
       onClick={handleClick}
       disabled={connected && disabled}
-      overlay={
-        <Menu className={'black-dropdown'}>
-          <Menu.Item onClick={open}>Change Wallet</Menu.Item>
-        </Menu>
-      }
+      //overlay={
+      //  <Menu className={'black-dropdown'}>
+      //    <Menu.Item onClick={open}>Change Wallet</Menu.Item>
+      //  </Menu>
+      //}
     >
-      Connect
-    </Dropdown.Button>
+      <WalletOutlined /> Connect Wallet
+    </Button>
   );
 };

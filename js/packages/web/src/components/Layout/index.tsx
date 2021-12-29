@@ -1,13 +1,17 @@
 import React from 'react';
-import { Layout } from 'antd';
+import { Layout, Menu, Button } from 'antd';
+import { Link } from 'react-router-dom';
 
 import { AppBar } from '../AppBar';
 import { WavesImage } from '../WavesImage';
 import { Footer } from '../Footer';
 
-const { Header, Content } = Layout;
+import { useWallet } from '@solana/wallet-adapter-react';
+
+const { Header, Sider, Content } = Layout;
 
 export const AppLayout = React.memo((props: any) => {
+  const { connected } = useWallet();
   return (
     <>
       <Layout id={'main-layout'}>
@@ -18,19 +22,39 @@ export const AppLayout = React.memo((props: any) => {
         <Header className="App-Bar">
           <AppBar />
         </Header>
-        <WavesImage />
         <Layout id={'width-layout'}>
+        <Sider className="tsunami-sidebar">
+            <Menu className="tsunami-sidebar-menu">
+              <Menu.Item key={'explore'}>
+                <Link to={`/`} key={'explore'}>
+                  <Button className="app-btn">Explore</Button>
+                </Link>
+              </Menu.Item>
+              <Menu.Item key={'artwork'}>
+                <Link to={`/artworks`} key={'artwork'}>
+                  <Button className="app-btn">{connected ? 'My Items' : 'Artwork'}</Button>
+                </Link>
+              </Menu.Item>
+              <Menu.Item key={'artists'}>
+                <Link to={`/artists`} key={'artists'}>
+                  <Button className="app-btn">Creators</Button>
+                </Link>
+              </Menu.Item>
+            </Menu>
+          </Sider>
+          <Content 
+            style={{
+              overflow: 'scroll'
+            }} >
+            <WavesImage />
           <Content
             style={{
               overflow: 'scroll',
               padding: '30px 48px ',
             }}
           >
-            <div className="directionsText">
-              <div className="directionsTitle">Purchase Content</div>
-              <div className="directionsSubTitle">Search the Tsunami marketplace to find then purchase the dataset or algorithm you need</div>
-            </div>
             {props.children}
+          </Content>
           </Content>
         </Layout>
         <Footer />

@@ -115,6 +115,7 @@ export const LogoLink = () => {
 };
 
 export const AppBar = () => {
+  //const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
   const { connected } = useWallet();
   return (
     <>
@@ -130,14 +131,13 @@ export const AppBar = () => {
             <div className="subTitle">The NFT Marketplace</div>
           </div>
           &nbsp;&nbsp;&nbsp;
-          <MetaplexMenu />
         </div>
         <div className="app-right">
           {!connected && (
             <HowToBuyModal buttonClassName="modal-button-default" />
           )}
           {!connected && (
-            <ConnectButton style={{ height: 48 }} allowWalletChange />
+            <ConnectButton className="tsunami-connector" allowWalletChange />
           )}
           {connected && (
             <>

@@ -11,6 +11,7 @@ import {
   AuctionCreateView,
   AuctionView,
   HomeView,
+  NFTJPEGsView,
   StaticPageView,
 } from './views';
 import { AdminView } from './views/admin';
@@ -69,6 +70,11 @@ export function Routes() {
               exact
               path="/auction/:id/billing"
               component={() => <BillingView />}
+            />
+            <Route
+              exact
+              path="/nftjpegs"
+              component={() => <NFTJPEGsView />}
             />
             <Route path="/about" component={() => <StaticPageView />} />
             <Route path="/" component={() => <HomeView />} />

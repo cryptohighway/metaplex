@@ -1,16 +1,17 @@
 .App-Bar {
   padding: 0px;
-  justify-content: space-between !important;            
+  justify-content: space-between !important;
   background-color: #0715d4;
 
+  // These are all just for reference
   //'@primary-color': '#768BF9',
-  background-color: #768BF9;
+  background-color: #768bf9;
   //'@text-color': 'rgba(255, 255, 255)',
   background-color: rgba(255, 255, 255);
   //'@text-color': '#d40767',
   background-color: #d40767;
   //'@assetPrefix': assetPrefix || "''",
-  background-color: #FFF;
+  background-color: #fff;
   //'@body-background': '#49527a',
   background-color: #49527a;
 
@@ -45,8 +46,33 @@
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 16px;  
+  line-height: 16px;
   padding: 1px 15px 1px 6px;
+}
+
+.tsunami-connector {
+  //color: #121212;
+  color: #83d6fe;
+  //border-color: #121212;
+  border-color: #83d6fe;
+  //border-width: 5px;
+  //background: white !important;
+  background: transparent;
+  //border: 5px;
+  box-shadow: 0px 0px 24px rgba(26, 26, 26, 0.12);
+  border-radius: 8px;
+  padding: 5px 5px;
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 400;
+  height: fit-content;
+
+  &:hover,
+  &:focus {
+    background: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+  }
 }
 
 .divider {

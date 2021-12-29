@@ -1,0 +1,506 @@
+{
+  "Boss Bulls Club #2628": {
+    "mint": "G1rvQXD652M5pkdzvFroKyoX9xy5VTQUsdNzYjyD5E19",
+    "address": "A4K19niX1w2jKebxwsb6srB2TneeUpenMnwWgR1XwWws",
+    "splTokenInfo": {
+      "mint": "G1rvQXD652M5pkdzvFroKyoX9xy5VTQUsdNzYjyD5E19",
+      "owner": "D5JhLAUmrdNpPbutVupo7hH2aVfxjgyUMb1B4jE9WhYL",
+      "amount": "1",
+      "delegateOption": 0,
+      "delegate": null,
+      "state": 1,
+      "isNativeOption": 0,
+      "isNative": false,
+      "delegatedAmount": "0",
+      "closeAuthorityOption": 0,
+      "closeAuthority": null,
+      "address": "A4K19niX1w2jKebxwsb6srB2TneeUpenMnwWgR1XwWws",
+      "isInitialized": true,
+      "isFrozen": false,
+      "rentExemptReserve": null
+    },
+    "splMintInfo": {
+      "mintAuthorityOption": 1,
+      "mintAuthority": "8qL95TJo4BvD4KoonfvpMD5t1U8aEuMQtjN5dJtho8fL",
+      "supply": "1",
+      "decimals": 0,
+      "isInitialized": true,
+      "freezeAuthorityOption": 1,
+      "freezeAuthority": "8qL95TJo4BvD4KoonfvpMD5t1U8aEuMQtjN5dJtho8fL"
+    },
+    "metadataPDA": {
+      "_bn": "21723177521159143682932007222196576118974908481284037623197962391991404248744"
+    },
+    "metadataOnchain": {
+      "key": 4,
+      "updateAuthority": "2gbNtFue7SF3r1ER4vsnrB7ruq6ni7haTpBuAYDQDC6S",
+      "mint": "G1rvQXD652M5pkdzvFroKyoX9xy5VTQUsdNzYjyD5E19",
+      "data": {
+        "name": "Boss Bulls Club #2628",
+        "symbol": "BBC",
+        "uri": "https://arweave.net/FbRjAmOgHXASD80HCfG3mxFildtsVO3M6hs7E-4zdIs",
+        "sellerFeeBasisPoints": 1000,
+        "creators": [
+          {
+            "address": "Cu9hWTmbPDBJn3YvqQMGnWsSv5JPd2JrF8ZenFoB6VG7",
+            "verified": 1,
+            "share": 0
+          },
+          {
+            "address": "GKSUEnJsqwvG1Vpw9f41FgLdyhm6w1qjnduwQFHm7qFp",
+            "verified": 0,
+            "share": 80
+          },
+          {
+            "address": "7czJZe6eQczyuA1uU7KWruNTf2FMhXfsycfxJV57U6Wh",
+            "verified": 0,
+            "share": 11
+          },
+          {
+            "address": "Fu3XN2JU6e11ke4MoeuqqWxC5FFYmh9Z2Q7JoSFmb25V",
+            "verified": 0,
+            "share": 7
+          },
+          {
+            "address": "EuhB5uha3YpdfThXY9jAcersyLza3YMjPj894ejFzn3p",
+            "verified": 0,
+            "share": 2
+          }
+        ]
+      },
+      "primarySaleHappened": 1,
+      "isMutable": 1
+    },
+    "metadataExternal": {
+      "name": "Boss Bulls Club #2628",
+      "symbol": "BBC",
+      "description": "Prestigious Club of Ultra-Realistic and Metaverse-Ready Boss Bulls",
+      "seller_fee_basis_points": 1000,
+      "image": "https://www.arweave.net/vG9fcKm3J5nX-5bqPNRcpeYzF2Ux2U0oSUvS5R0Z_S8?ext=png",
+      "external_url": "https://www.bossbullsclub.com",
+      "edition": 2628,
+      "attributes": [
+        { "trait_type": "Background", "value": "Bronze" },
+        { "trait_type": "Body", "value": "Mecha Bronze" },
+        { "trait_type": "Clothing", "value": "Mecha Bronze Armor" },
+        { "trait_type": "Head", "value": "Mecha Bronze Horns" },
+        { "trait_type": "Eyes", "value": "Over 9000 Visor" },
+        { "trait_type": "Mouth Nose Ears", "value": "Viking Nose Ring" },
+        { "trait_type": "Holding", "value": "Lumberjack Axe" }
+      ],
+      "properties": {
+        "files": [
+          {
+            "uri": "https://www.arweave.net/vG9fcKm3J5nX-5bqPNRcpeYzF2Ux2U0oSUvS5R0Z_S8?ext=png",
+            "type": "image/png"
+          }
+        ],
+        "category": "image",
+        "creators": [
+          {
+            "address": "GKSUEnJsqwvG1Vpw9f41FgLdyhm6w1qjnduwQFHm7qFp",
+            "share": 80
+          },
+          {
+            "address": "7czJZe6eQczyuA1uU7KWruNTf2FMhXfsycfxJV57U6Wh",
+            "share": 11
+          },
+          {
+            "address": "Fu3XN2JU6e11ke4MoeuqqWxC5FFYmh9Z2Q7JoSFmb25V",
+            "share": 7
+          },
+          {
+            "address": "EuhB5uha3YpdfThXY9jAcersyLza3YMjPj894ejFzn3p",
+            "share": 2
+          }
+        ]
+      }
+    },
+    "editionType": "MasterEditionV2",
+    "masterEditionPDA": {
+      "_bn": "52643788076401662655205703082984181996255936912362405216427134931614098418555"
+    },
+    "masterEditionData": { "key": 6, "supply": "0", "maxSupply": "0" },
+    "rarityScore": 3279.5117259552044,
+    "rarityRank": 0,
+    "rarityCategory": "legendary"
+  },
+  "Boss Bulls Club #7121": {
+    "mint": "5Cp6K2bCQMXveJp59cSmJFV1AAR3YbxwjfstBCdktAgJ",
+    "address": "Dakac4UqorsPiqHyJGNsvT8FWjQXK8wcPjdgg6fSWwhq",
+    "splTokenInfo": {
+      "mint": "5Cp6K2bCQMXveJp59cSmJFV1AAR3YbxwjfstBCdktAgJ",
+      "owner": "6n3jYrYo3DhkJxj4iuctRDqXE6xQdmAPPGSWSDiEPcCY",
+      "amount": "1",
+      "delegateOption": 0,
+      "delegate": null,
+      "state": 1,
+      "isNativeOption": 0,
+      "isNative": false,
+      "delegatedAmount": "0",
+      "closeAuthorityOption": 0,
+      "closeAuthority": null,
+      "address": "Dakac4UqorsPiqHyJGNsvT8FWjQXK8wcPjdgg6fSWwhq",
+      "isInitialized": true,
+      "isFrozen": false,
+      "rentExemptReserve": null
+    },
+    "splMintInfo": {
+      "mintAuthorityOption": 1,
+      "mintAuthority": "5y3FXDroX8zbr4cuaBzDhxH87iMQ2QrKygVUK9WPfjqK",
+      "supply": "1",
+      "decimals": 0,
+      "isInitialized": true,
+      "freezeAuthorityOption": 1,
+      "freezeAuthority": "5y3FXDroX8zbr4cuaBzDhxH87iMQ2QrKygVUK9WPfjqK"
+    },
+    "metadataPDA": {
+      "_bn": "2619454914567387347067516190040995933626516359907763619626057594891917403019"
+    },
+    "metadataOnchain": {
+      "key": 4,
+      "updateAuthority": "2gbNtFue7SF3r1ER4vsnrB7ruq6ni7haTpBuAYDQDC6S",
+      "mint": "5Cp6K2bCQMXveJp59cSmJFV1AAR3YbxwjfstBCdktAgJ",
+      "data": {
+        "name": "Boss Bulls Club #7121",
+        "symbol": "BBC",
+        "uri": "https://arweave.net/JonIGWsm-wbjG88HzFIVWgK3VeisH0Cw56w_0nW2gDg",
+        "sellerFeeBasisPoints": 1000,
+        "creators": [
+          {
+            "address": "Cu9hWTmbPDBJn3YvqQMGnWsSv5JPd2JrF8ZenFoB6VG7",
+            "verified": 1,
+            "share": 0
+          },
+          {
+            "address": "GKSUEnJsqwvG1Vpw9f41FgLdyhm6w1qjnduwQFHm7qFp",
+            "verified": 0,
+            "share": 80
+          },
+          {
+            "address": "7czJZe6eQczyuA1uU7KWruNTf2FMhXfsycfxJV57U6Wh",
+            "verified": 0,
+            "share": 11
+          },
+          {
+            "address": "Fu3XN2JU6e11ke4MoeuqqWxC5FFYmh9Z2Q7JoSFmb25V",
+            "verified": 0,
+            "share": 7
+          },
+          {
+            "address": "EuhB5uha3YpdfThXY9jAcersyLza3YMjPj894ejFzn3p",
+            "verified": 0,
+            "share": 2
+          }
+        ]
+      },
+      "primarySaleHappened": 1,
+      "isMutable": 1
+    },
+    "metadataExternal": {
+      "name": "Boss Bulls Club #7121",
+      "symbol": "BBC",
+      "description": "Prestigious Club of Ultra-Realistic and Metaverse-Ready Boss Bulls",
+      "seller_fee_basis_points": 1000,
+      "image": "https://www.arweave.net/k5G7Zv8il_X8pORx1ybyZVxJkqWo8P7JjsVK7_rT2vU?ext=png",
+      "external_url": "https://www.bossbullsclub.com",
+      "edition": 7121,
+      "attributes": [
+        { "trait_type": "Background", "value": "Silver" },
+        { "trait_type": "Body", "value": "Mecha Silver" },
+        { "trait_type": "Clothing", "value": "Mecha Silver Armor" },
+        { "trait_type": "Head", "value": "Mecha Silver Horns" },
+        { "trait_type": "Eyes", "value": "The One Sunglasses" },
+        { "trait_type": "Mouth Nose Ears", "value": "Clown Nose" },
+        { "trait_type": "Holding", "value": "None" }
+      ],
+      "properties": {
+        "files": [
+          {
+            "uri": "https://www.arweave.net/k5G7Zv8il_X8pORx1ybyZVxJkqWo8P7JjsVK7_rT2vU?ext=png",
+            "type": "image/png"
+          }
+        ],
+        "category": "image",
+        "creators": [
+          {
+            "address": "GKSUEnJsqwvG1Vpw9f41FgLdyhm6w1qjnduwQFHm7qFp",
+            "share": 80
+          },
+          {
+            "address": "7czJZe6eQczyuA1uU7KWruNTf2FMhXfsycfxJV57U6Wh",
+            "share": 11
+          },
+          {
+            "address": "Fu3XN2JU6e11ke4MoeuqqWxC5FFYmh9Z2Q7JoSFmb25V",
+            "share": 7
+          },
+          {
+            "address": "EuhB5uha3YpdfThXY9jAcersyLza3YMjPj894ejFzn3p",
+            "share": 2
+          }
+        ]
+      }
+    },
+    "editionType": "MasterEditionV2",
+    "masterEditionPDA": {
+      "_bn": "33375418617076792913309942366724746878687878624748340226846771443701091894602"
+    },
+    "masterEditionData": { "key": 6, "supply": "0", "maxSupply": "0" },
+    "rarityScore": 3147.7506055057656,
+    "rarityRank": 1,
+    "rarityCategory": "legendary"
+  },
+  "Boss Bulls Club #32": {
+    "mint": "327a2LPxU6VnFDkooo87qXHWe2PWqgjmA8BatforwZtj",
+    "address": "FpMKRMssr31dN16Vm7embuiCkxAec9KMVaQYjz6qM1oG",
+    "splTokenInfo": {
+      "mint": "327a2LPxU6VnFDkooo87qXHWe2PWqgjmA8BatforwZtj",
+      "owner": "GUfCR9mK6azb9vcpsxgXyj7XRPAKJd4KMHTTVvtncGgp",
+      "amount": "1",
+      "delegateOption": 0,
+      "delegate": null,
+      "state": 1,
+      "isNativeOption": 0,
+      "isNative": false,
+      "delegatedAmount": "0",
+      "closeAuthorityOption": 0,
+      "closeAuthority": null,
+      "address": "FpMKRMssr31dN16Vm7embuiCkxAec9KMVaQYjz6qM1oG",
+      "isInitialized": true,
+      "isFrozen": false,
+      "rentExemptReserve": null
+    },
+    "splMintInfo": {
+      "mintAuthorityOption": 1,
+      "mintAuthority": "CBbW6nZpH1GqFtjK8dHd7wHYP3xtKdmjUES4PsZcTCMN",
+      "supply": "1",
+      "decimals": 0,
+      "isInitialized": true,
+      "freezeAuthorityOption": 1,
+      "freezeAuthority": "CBbW6nZpH1GqFtjK8dHd7wHYP3xtKdmjUES4PsZcTCMN"
+    },
+    "metadataPDA": {
+      "_bn": "113375125479864106688165905045078568935318524522081700561633078019997207768495"
+    },
+    "metadataOnchain": {
+      "key": 4,
+      "updateAuthority": "2gbNtFue7SF3r1ER4vsnrB7ruq6ni7haTpBuAYDQDC6S",
+      "mint": "327a2LPxU6VnFDkooo87qXHWe2PWqgjmA8BatforwZtj",
+      "data": {
+        "name": "Boss Bulls Club #32",
+        "symbol": "BBC",
+        "uri": "https://arweave.net/2wdvLRBDWp4r9q3qM7LhAeRpDdKB2RCIsSgVJE_mPPo",
+        "sellerFeeBasisPoints": 1000,
+        "creators": [
+          {
+            "address": "Cu9hWTmbPDBJn3YvqQMGnWsSv5JPd2JrF8ZenFoB6VG7",
+            "verified": 1,
+            "share": 0
+          },
+          {
+            "address": "GKSUEnJsqwvG1Vpw9f41FgLdyhm6w1qjnduwQFHm7qFp",
+            "verified": 0,
+            "share": 80
+          },
+          {
+            "address": "7czJZe6eQczyuA1uU7KWruNTf2FMhXfsycfxJV57U6Wh",
+            "verified": 0,
+            "share": 11
+          },
+          {
+            "address": "Fu3XN2JU6e11ke4MoeuqqWxC5FFYmh9Z2Q7JoSFmb25V",
+            "verified": 0,
+            "share": 7
+          },
+          {
+            "address": "EuhB5uha3YpdfThXY9jAcersyLza3YMjPj894ejFzn3p",
+            "verified": 0,
+            "share": 2
+          }
+        ]
+      },
+      "primarySaleHappened": 1,
+      "isMutable": 1
+    },
+    "metadataExternal": {
+      "name": "Boss Bulls Club #32",
+      "symbol": "BBC",
+      "description": "Prestigious Club of Ultra-Realistic and Metaverse-Ready Boss Bulls",
+      "seller_fee_basis_points": 1000,
+      "image": "https://www.arweave.net/WtXnOUgi-J_0gLFo4iCSXhgdzlDjxIzXPbKAaNdgQno?ext=png",
+      "external_url": "https://www.bossbullsclub.com",
+      "edition": 32,
+      "attributes": [
+        { "trait_type": "Background", "value": "Gold" },
+        { "trait_type": "Body", "value": "Mecha Gold" },
+        { "trait_type": "Clothing", "value": "Mecha Gold Armor" },
+        { "trait_type": "Head", "value": "Mecha Gold Horns" },
+        { "trait_type": "Eyes", "value": "Sunglasses" },
+        { "trait_type": "Mouth Nose Ears", "value": "Clown Nose" },
+        { "trait_type": "Holding", "value": "Bouquet" }
+      ],
+      "properties": {
+        "files": [
+          {
+            "uri": "https://www.arweave.net/WtXnOUgi-J_0gLFo4iCSXhgdzlDjxIzXPbKAaNdgQno?ext=png",
+            "type": "image/png"
+          }
+        ],
+        "category": "image",
+        "creators": [
+          {
+            "address": "GKSUEnJsqwvG1Vpw9f41FgLdyhm6w1qjnduwQFHm7qFp",
+            "share": 80
+          },
+          {
+            "address": "7czJZe6eQczyuA1uU7KWruNTf2FMhXfsycfxJV57U6Wh",
+            "share": 11
+          },
+          {
+            "address": "Fu3XN2JU6e11ke4MoeuqqWxC5FFYmh9Z2Q7JoSFmb25V",
+            "share": 7
+          },
+          {
+            "address": "EuhB5uha3YpdfThXY9jAcersyLza3YMjPj894ejFzn3p",
+            "share": 2
+          }
+        ]
+      }
+    },
+    "editionType": "MasterEditionV2",
+    "masterEditionPDA": {
+      "_bn": "75153503350793597765410684978236693441339401688073814096315378673270762369769"
+    },
+    "masterEditionData": { "key": 6, "supply": "0", "maxSupply": "0" },
+    "rarityScore": 1865.5505466110117,
+    "rarityRank": 2,
+    "rarityCategory": "legendary"
+  },
+  "Boss Bulls Club #63": {
+    "mint": "BHgDRt3CQtDbMMAUnTKiyCR4X6DZivVdWCGQy292h3rk",
+    "address": "6E2Jxvu1NTyboDfBkRvxfU1XfHx5QkMkQfr9sYToopzR",
+    "splTokenInfo": {
+      "mint": "BHgDRt3CQtDbMMAUnTKiyCR4X6DZivVdWCGQy292h3rk",
+      "owner": "Fu3XN2JU6e11ke4MoeuqqWxC5FFYmh9Z2Q7JoSFmb25V",
+      "amount": "1",
+      "delegateOption": 0,
+      "delegate": null,
+      "state": 1,
+      "isNativeOption": 0,
+      "isNative": false,
+      "delegatedAmount": "0",
+      "closeAuthorityOption": 0,
+      "closeAuthority": null,
+      "address": "6E2Jxvu1NTyboDfBkRvxfU1XfHx5QkMkQfr9sYToopzR",
+      "isInitialized": true,
+      "isFrozen": false,
+      "rentExemptReserve": null
+    },
+    "splMintInfo": {
+      "mintAuthorityOption": 1,
+      "mintAuthority": "EZ2LTZPvBp8tyK8adbPCYsnEmfjYTg8z4mheJHWnErBj",
+      "supply": "1",
+      "decimals": 0,
+      "isInitialized": true,
+      "freezeAuthorityOption": 1,
+      "freezeAuthority": "EZ2LTZPvBp8tyK8adbPCYsnEmfjYTg8z4mheJHWnErBj"
+    },
+    "metadataPDA": {
+      "_bn": "61234047640175315254082739298893826110680275180660328241505537117255399119273"
+    },
+    "metadataOnchain": {
+      "key": 4,
+      "updateAuthority": "2gbNtFue7SF3r1ER4vsnrB7ruq6ni7haTpBuAYDQDC6S",
+      "mint": "BHgDRt3CQtDbMMAUnTKiyCR4X6DZivVdWCGQy292h3rk",
+      "data": {
+        "name": "Boss Bulls Club #63",
+        "symbol": "BBC",
+        "uri": "https://arweave.net/ZAOsJUBtiTnmMDI5vkpYN3HL-4erfOsJLJI0Bv7-3AY",
+        "sellerFeeBasisPoints": 1000,
+        "creators": [
+          {
+            "address": "Cu9hWTmbPDBJn3YvqQMGnWsSv5JPd2JrF8ZenFoB6VG7",
+            "verified": 1,
+            "share": 0
+          },
+          {
+            "address": "GKSUEnJsqwvG1Vpw9f41FgLdyhm6w1qjnduwQFHm7qFp",
+            "verified": 0,
+            "share": 80
+          },
+          {
+            "address": "7czJZe6eQczyuA1uU7KWruNTf2FMhXfsycfxJV57U6Wh",
+            "verified": 0,
+            "share": 11
+          },
+          {
+            "address": "Fu3XN2JU6e11ke4MoeuqqWxC5FFYmh9Z2Q7JoSFmb25V",
+            "verified": 0,
+            "share": 7
+          },
+          {
+            "address": "EuhB5uha3YpdfThXY9jAcersyLza3YMjPj894ejFzn3p",
+            "verified": 0,
+            "share": 2
+          }
+        ]
+      },
+      "primarySaleHappened": 1,
+      "isMutable": 1
+    },
+    "metadataExternal": {
+      "name": "Boss Bulls Club #63",
+      "symbol": "BBC",
+      "description": "Prestigious Club of Ultra-Realistic and Metaverse-Ready Boss Bulls",
+      "seller_fee_basis_points": 1000,
+      "image": "https://www.arweave.net/r_OPTcBwdarr81XQGgWTzWOymCmn4FQ42sC75Up9RLo?ext=png",
+      "external_url": "https://www.bossbullsclub.com",
+      "edition": 63,
+      "attributes": [
+        { "trait_type": "Background", "value": "Gold" },
+        { "trait_type": "Body", "value": "Mecha Gold" },
+        { "trait_type": "Clothing", "value": "Mecha Gold Armor" },
+        { "trait_type": "Head", "value": "Mecha Gold Horns" },
+        { "trait_type": "Eyes", "value": "Reading Glasses White" },
+        { "trait_type": "Mouth Nose Ears", "value": "Cigarette" },
+        { "trait_type": "Holding", "value": "Lumberjack Axe" }
+      ],
+      "properties": {
+        "files": [
+          {
+            "uri": "https://www.arweave.net/r_OPTcBwdarr81XQGgWTzWOymCmn4FQ42sC75Up9RLo?ext=png",
+            "type": "image/png"
+          }
+        ],
+        "category": "image",
+        "creators": [
+          {
+            "address": "GKSUEnJsqwvG1Vpw9f41FgLdyhm6w1qjnduwQFHm7qFp",
+            "share": 80
+          },
+          {
+            "address": "7czJZe6eQczyuA1uU7KWruNTf2FMhXfsycfxJV57U6Wh",
+            "share": 11
+          },
+          {
+            "address": "Fu3XN2JU6e11ke4MoeuqqWxC5FFYmh9Z2Q7JoSFmb25V",
+            "share": 7
+          },
+          {
+            "address": "EuhB5uha3YpdfThXY9jAcersyLza3YMjPj894ejFzn3p",
+            "share": 2
+          }
+        ]
+      }
+    },
+    "editionType": "MasterEditionV2",
+    "masterEditionPDA": {
+      "_bn": "91077478373703734919762450193152542371240154258640160532199879374360601828554"
+    },
+    "masterEditionData": { "key": 6, "supply": "0", "maxSupply": "0" },
+    "rarityScore": 1797.657463877413,
+    "rarityRank": 3,
+    "rarityCategory": "legendary"
+  }
+}
